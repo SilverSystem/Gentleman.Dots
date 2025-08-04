@@ -20,7 +20,7 @@ local config = {}
 -- 	},
 -- }
 
-config.color_scheme = "Kanagawa (Gogh)"
+config.color_scheme = "Gruvbox Dark (Gogh)"
 -- This is where you actually apply your config choices
 config.window_padding = {
 	top = 0,
@@ -29,7 +29,7 @@ config.window_padding = {
 }
 
 -- Set the terminal font
-config.font = wezterm.font("IosevkaTerm NF")
+config.font = wezterm.font("Cascadia Code")
 
 -- Hide the tab bar if only one tab is open
 config.hide_tab_bar_if_only_one_tab = true
@@ -45,7 +45,7 @@ config.win32_system_backdrop = "Acrylic" -- Only Works in Windows
 config.font_size = 16.0
 
 -- Smooth hack
-config.max_fps = 240
+config.max_fps = 144
 
 -- Enable Kitty Graphics
 config.enable_kitty_graphics = true
@@ -55,8 +55,8 @@ config.enable_scroll_bar = false
 
 -- activate ONLY if windows --
 
--- config.default_domain = 'WSL:Ubuntu'
--- config.front_end = "OpenGL"
+config.default_domain = 'WSL:Ubuntu'
+config.front_end = "OpenGL"
 -- local gpus = wezterm.gui.enumerate_gpus()
 -- if #gpus > 0 then
 --   config.webgpu_preferred_adapter = gpus[1] -- only set if there's at least one GPU

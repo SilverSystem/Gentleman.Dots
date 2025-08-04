@@ -256,7 +256,7 @@ if [ -d "Gentleman.Dots" ]; then
   echo -e "${GREEN}Repository already cloned. Overwriting...${NC}"
   rm -rf "Gentleman.Dots"
 fi
-clone_repository_with_progress "https://github.com/Gentleman-Programming/Gentleman.Dots.git" "Gentleman.Dots" 20
+clone_repository_with_progress "https://github.com/SilverSystem/Gentleman.Dots.git" "Gentleman.Dots" 20
 cd Gentleman.Dots || exit
 
 # Install Homebrew if not installed
@@ -548,8 +548,8 @@ case "$wm_choice" in
   fi
 
   run_command "mkdir -p ~/.tmux"
-  run_command "cp -r GentlemanTmux/.tmux/* ~/.tmux/"
-  run_command "cp GentlemanTmux/.tmux.conf ~/"
+  run_command "cp -r GentlemanTmux/plugins/* ~/.tmux/"
+  run_command "cp GentlemanTmux/.tmux.conf ~/.tmux.conf"
 
   echo -e "${YELLOW}Installing Tmux plugins...${NC}"
   SESSION_NAME="plugin-installation"
