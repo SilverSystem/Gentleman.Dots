@@ -380,9 +380,23 @@ themes {
       black "#000000"     // bl: dark background (almost black)
       white "#C9C7CD"     // na: light text (light gray)
     }
+
+    gruvbox_dark {
+      fg 213 196 161
+      bg 40 40 40
+      black 60 56 54
+      red 204 36 29
+      green 152 151 26
+      yellow 215 153 33
+      blue 69 133 136
+      magenta 177 98 134
+      cyan 104 157 106
+      white 251 241 199
+      orange 214 93 14
+    }
 }
 
-theme "kanagawa_wave"
+theme "gruvbox_dark"
 
 // Choose the base input mode of zellij.
 // Default: normal
@@ -401,7 +415,7 @@ default_mode "locked"
 // The name of the default layout to load on startup
 // Default: "work_oldWorld"
 // 
-default_layout "work_kanagawa"
+default_layout "work_gruvbox"
  
 // The folder in which Zellij will look for layouts
 // (Requires restart)
