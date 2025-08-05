@@ -1725,28 +1725,71 @@
   # typeset -g COLOR_BRIGHT_WHITE="#dcd7ba"  # Bright White
  
   # kanagawa Theme
-  typeset -g COLOR_BACKGROUND="#1f1f28"    # bl: dark background
-  typeset -g COLOR_FOREGROUND="#dcd7ba"    # na: main text
+  # typeset -g COLOR_BACKGROUND="#1f1f28"    # bl: dark background
+  # typeset -g COLOR_FOREGROUND="#dcd7ba"    # na: main text
+
+  # # --- ANSI colors ---
+  # typeset -g COLOR_BLACK="#090618"         # bl: dark background
+  # typeset -g COLOR_RED="#c34043"           # ia: intense red
+  # typeset -g COLOR_GREEN="#76946a"         # va: soft green
+  # typeset -g COLOR_YELLOW="#c0a36e"        # ca: beige
+  # typeset -g COLOR_BLUE="#7e9cd8"          # va: light blue
+  # typeset -g COLOR_MAGENTA="#957fb8"       # ca: lavender
+  # typeset -g COLOR_CYAN="#6a9589"          # va: teal
+  # typeset -g COLOR_WHITE="#c8c093"         # na: light gray
+
+  # # --- Bright ANSI colors ---
+  # typeset -g COLOR_BRIGHT_BLACK="#727169"  # nb: medium gray
+  # typeset -g COLOR_BRIGHT_RED="#e82424"    # ia: bright red
+  # typeset -g COLOR_BRIGHT_GREEN="#98bb6c"  # va: bright green
+  # typeset -g COLOR_BRIGHT_YELLOW="#e6c384" # ca: bright beige
+  # typeset -g COLOR_BRIGHT_BLUE="#7fb4ca"   # va: bright blue
+  # typeset -g COLOR_BRIGHT_MAGENTA="#938aa9" # ca: bright lavender
+  # typeset -g COLOR_BRIGHT_CYAN="#7aa89f"   # va: bright teal
+  # typeset -g COLOR_BRIGHT_WHITE="#dcd7ba"  # na: bright white
+
+  # # Color assignment for Powerlevel10k
+  # typeset -g POWERLEVEL9K_BACKGROUND=$COLOR_BACKGROUND
+  # typeset -g POWERLEVEL9K_FOREGROUND=$COLOR_FOREGROUND
+
+  # # Directory
+  # typeset -g POWERLEVEL9K_DIR_FOREGROUND=$COLOR_BLUE
+  # typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=$COLOR_CYAN
+
+  # # Git / VCS
+  # typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=$COLOR_YELLOW
+  # typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=$COLOR_GREEN
+  # typeset -g POWERLEVEL9K_VCS_CONFLICTED_FOREGROUND=$COLOR_RED
+
+  # # Other elements
+  # typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$COLOR_MAGENTA
+  # typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=$COLOR_GREEN
+  # typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=$COLOR_RED
+  # typeset -g POWERLEVEL9K_TIME_FOREGROUND=$COLOR_CYAN
+  
+  # Gruvbox Dark Theme
+  typeset -g COLOR_BACKGROUND="#282828"    # fondo oscuro
+  typeset -g COLOR_FOREGROUND="#ebdbb2"    # texto principal
 
   # --- ANSI colors ---
-  typeset -g COLOR_BLACK="#090618"         # bl: dark background
-  typeset -g COLOR_RED="#c34043"           # ia: intense red
-  typeset -g COLOR_GREEN="#76946a"         # va: soft green
-  typeset -g COLOR_YELLOW="#c0a36e"        # ca: beige
-  typeset -g COLOR_BLUE="#7e9cd8"          # va: light blue
-  typeset -g COLOR_MAGENTA="#957fb8"       # ca: lavender
-  typeset -g COLOR_CYAN="#6a9589"          # va: teal
-  typeset -g COLOR_WHITE="#c8c093"         # na: light gray
+  typeset -g COLOR_BLACK="#282828"         # fondo negro
+  typeset -g COLOR_RED="#cc241d"           # rojo intenso
+  typeset -g COLOR_GREEN="#98971a"         # verde oliva
+  typeset -g COLOR_YELLOW="#d79921"        # amarillo mostaza
+  typeset -g COLOR_BLUE="#458588"          # azul apagado
+  typeset -g COLOR_MAGENTA="#b16286"       # magenta pastel
+  typeset -g COLOR_CYAN="#689d6a"          # cian verdoso
+  typeset -g COLOR_WHITE="#a89984"         # gris claro
 
   # --- Bright ANSI colors ---
-  typeset -g COLOR_BRIGHT_BLACK="#727169"  # nb: medium gray
-  typeset -g COLOR_BRIGHT_RED="#e82424"    # ia: bright red
-  typeset -g COLOR_BRIGHT_GREEN="#98bb6c"  # va: bright green
-  typeset -g COLOR_BRIGHT_YELLOW="#e6c384" # ca: bright beige
-  typeset -g COLOR_BRIGHT_BLUE="#7fb4ca"   # va: bright blue
-  typeset -g COLOR_BRIGHT_MAGENTA="#938aa9" # ca: bright lavender
-  typeset -g COLOR_BRIGHT_CYAN="#7aa89f"   # va: bright teal
-  typeset -g COLOR_BRIGHT_WHITE="#dcd7ba"  # na: bright white
+  typeset -g COLOR_BRIGHT_BLACK="#928374"  # gris medio
+  typeset -g COLOR_BRIGHT_RED="#fb4934"    # rojo brillante
+  typeset -g COLOR_BRIGHT_GREEN="#b8bb26"  # verde brillante
+  typeset -g COLOR_BRIGHT_YELLOW="#fabd2f" # amarillo brillante
+  typeset -g COLOR_BRIGHT_BLUE="#83a598"   # azul brillante
+  typeset -g COLOR_BRIGHT_MAGENTA="#d3869b"# magenta brillante
+  typeset -g COLOR_BRIGHT_CYAN="#8ec07c"   # cian brillante
+  typeset -g COLOR_BRIGHT_WHITE="#ebdbb2"  # blanco brillante
 
   # Color assignment for Powerlevel10k
   typeset -g POWERLEVEL9K_BACKGROUND=$COLOR_BACKGROUND
