@@ -41,7 +41,7 @@ Welcome to the Gentleman.Dots manual configuration guide! This document will wal
 **_Clone the repo before continuing!!!_**
 
 ```bash
-git clone git@github.com:Gentleman-Programming/Gentleman.Dots.git
+git clone git@github.com:SilverSystem/Gentleman.Dots.git
 cd Gentleman.Dots
 ```
 
