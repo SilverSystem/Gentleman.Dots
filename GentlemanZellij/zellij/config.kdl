@@ -15,10 +15,10 @@ keybinds clear-defaults=true {
         bind "d" { NewPane "down"; SwitchToMode "locked"; }
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "locked"; }
         bind "f" { ToggleFocusFullscreen; SwitchToMode "locked"; }
-        bind "h" { MoveFocus "left"; }
-        bind "j" { MoveFocus "down"; }
+        bind "j" { MoveFocus "left"; }
+        bind "l" { MoveFocus "down"; }
         bind "k" { MoveFocus "up"; }
-        bind "l" { MoveFocus "right"; }
+        bind ";" { MoveFocus "right"; }
         bind "n" { NewPane; SwitchToMode "locked"; }
         bind "p" { SwitchToMode "normal"; }
         bind "r" { NewPane "right"; SwitchToMode "locked"; }
@@ -44,10 +44,10 @@ keybinds clear-defaults=true {
         bind "[" { BreakPaneLeft; SwitchToMode "locked"; }
         bind "]" { BreakPaneRight; SwitchToMode "locked"; }
         bind "b" { BreakPane; SwitchToMode "locked"; }
-        bind "h" { GoToPreviousTab; }
-        bind "j" { GoToNextTab; }
-        bind "k" { GoToPreviousTab; }
+        bind "j" { GoToPreviousTab; }
         bind "l" { GoToNextTab; }
+        bind "k" { GoToPreviousTab; }
+        bind ";" { GoToNextTab; }
         bind "n" { NewTab; SwitchToMode "locked"; }
         bind "r" { SwitchToMode "renametab"; TabNameInput 0; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "locked"; }
@@ -63,14 +63,14 @@ keybinds clear-defaults=true {
         bind "+" { Resize "Increase"; }
         bind "-" { Resize "Decrease"; }
         bind "=" { Resize "Increase"; }
-        bind "H" { Resize "Decrease left"; }
-        bind "J" { Resize "Decrease down"; }
+        bind "J" { Resize "Decrease left"; }
+        bind "L" { Resize "Decrease down"; }
         bind "K" { Resize "Decrease up"; }
-        bind "L" { Resize "Decrease right"; }
-        bind "h" { Resize "Increase left"; }
-        bind "j" { Resize "Increase down"; }
+        bind ":" { Resize "Decrease right"; }
+        bind "j" { Resize "Increase left"; }
+        bind "l" { Resize "Increase down"; }
         bind "k" { Resize "Increase up"; }
-        bind "l" { Resize "Increase right"; }
+        bind ";" { Resize "Increase right"; }
         bind "r" { SwitchToMode "normal"; }
     }
     move {
@@ -78,10 +78,10 @@ keybinds clear-defaults=true {
         bind "down" { MovePane "down"; }
         bind "up" { MovePane "up"; }
         bind "right" { MovePane "right"; }
-        bind "h" { MovePane "left"; }
-        bind "j" { MovePane "down"; }
+        bind "j" { MovePane "left"; }
+        bind "l" { MovePane "down"; }
         bind "k" { MovePane "up"; }
-        bind "l" { MovePane "right"; }
+        bind ";" { MovePane "right"; }
         bind "m" { SwitchToMode "normal"; }
         bind "n" { MovePane; }
         bind "p" { MovePaneBackwards; }
@@ -94,10 +94,10 @@ keybinds clear-defaults=true {
         bind "Alt right" { MoveFocusOrTab "right"; SwitchToMode "locked"; }
         bind "e" { EditScrollback; SwitchToMode "locked"; }
         bind "f" { SwitchToMode "entersearch"; SearchInput 0; }
-        bind "Alt h" { MoveFocusOrTab "left"; SwitchToMode "locked"; }
-        bind "Alt j" { MoveFocus "down"; SwitchToMode "locked"; }
+        bind "Alt j" { MoveFocusOrTab "left"; SwitchToMode "locked"; }
+        bind "Alt l" { MoveFocus "down"; SwitchToMode "locked"; }
         bind "Alt k" { MoveFocus "up"; SwitchToMode "locked"; }
-        bind "Alt l" { MoveFocusOrTab "right"; SwitchToMode "locked"; }
+        bind "Alt ;" { MoveFocusOrTab "right"; SwitchToMode "locked"; }
         bind "s" { SwitchToMode "normal"; }
     }
     search {
@@ -160,17 +160,17 @@ keybinds clear-defaults=true {
             "increase pane size"    "ctrl + g + n + +"
             "decrease pane size"    "ctrl + g + n + -"
             "increase pane top"     "ctrl + g + n + k"
-            "increase pane right"   "ctrl + g + n + l"
-            "increase pane bottom"  "ctrl + g + n + j"
-            "increase pane left"    "ctrl + g + n + h"
+            "increase pane right"   "ctrl + g + n + ;"
+            "increase pane bottom"  "ctrl + g + n + l"
+            "increase pane left"    "ctrl + g + n + j"
             "decrease pane top"     "ctrl + g + n + K"
-            "decrease pane right"   "ctrl + g + n + L"
-            "decrease pane bottom"  "ctrl + g + n + J"
-            "decrease pane left"    "ctrl + g + n + H"
+            "decrease pane right"   "ctrl + g + n + :"
+            "decrease pane bottom"  "ctrl + g + n + L"
+            "decrease pane left"    "ctrl + g + n + J"
             "move pane to top"      "ctrl + g + h + k"
-            "move pane to right"    "ctrl + g + h + l"
-            "move pane to bottom"   "ctrl + g + h + j"
-            "move pane to left"     "ctrl + g + h + h"
+            "move pane to right"    "ctrl + g + h + ;"
+            "move pane to bottom"   "ctrl + g + h + l"
+            "move pane to left"     "ctrl + g + h + j"
             "search"                "ctrl + g + s + s"
             "go into edit mode"     "ctrl + g + s + e"
             "detach session"        "ctrl + g + o + w"
@@ -189,11 +189,11 @@ keybinds clear-defaults=true {
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
         bind "Alt f" { ToggleFloatingPanes; }
-        bind "Alt h" { MoveFocusOrTab "left"; }
+        bind "Alt j" { MoveFocusOrTab "left"; }
         bind "Alt i" { MoveTab "left"; }
-        bind "Alt j" { MoveFocus "down"; }
+        bind "Alt l" { MoveFocus "down"; }
         bind "Alt k" { MoveFocus "up"; }
-        bind "Alt l" { MoveFocusOrTab "right"; }
+        bind "Alt ;" { MoveFocusOrTab "right"; }
         bind "Alt n" { NewPane; }
         bind "Alt o" { MoveTab "right"; }
     }
@@ -239,10 +239,10 @@ keybinds clear-defaults=true {
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "locked"; }
         bind "d" { HalfPageScrollDown; }
         bind "Ctrl f" { PageScrollDown; }
-        bind "h" { PageScrollUp; }
-        bind "j" { ScrollDown; }
-        bind "k" { ScrollUp; }
-        bind "l" { PageScrollDown; }
+        bind "j" { PageScrollUp; }
+        bind "k" { ScrollDown; }
+        bind "l" { ScrollUp; }
+        bind ";" { PageScrollDown; }
         bind "u" { HalfPageScrollUp; }
     }
     entersearch {
@@ -382,18 +382,18 @@ themes {
     }
 
     gruvbox_dark {
-      fg 213 196 161
-      bg 40 40 40
-      black 60 56 54
-      red 204 36 29
-      green 152 151 26
-      yellow 215 153 33
-      blue 69 133 136
-      magenta 177 98 134
-      cyan 104 157 106
-      white 251 241 199
-      orange 214 93 14
-    }
+      fg       #d5c4a1  // (213, 196, 161)
+      bg       #282828  // (40, 40, 40)
+      black    #3c3836  // (60, 56, 54)
+      red      #cc241d  // (204, 36, 29)
+      green    #98971a  // (152, 151, 26)
+      yellow   #d79921  // (215, 153, 33)
+      blue     #458588  // (69, 133, 136)
+      magenta  #b16286  // (177, 98, 134)
+      cyan     #689d6a  // (104, 157, 106)
+      white    #fbf1c7  // (251, 241, 199)
+      orange   #d65d0e  // (214, 93, 14)
+}
 }
 
 theme "gruvbox_dark"

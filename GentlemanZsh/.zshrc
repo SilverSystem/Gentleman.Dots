@@ -35,14 +35,14 @@ source $(dirname $BREW_BIN)/share/zsh-syntax-highlighting/zsh-syntax-highlightin
 source $(dirname $BREW_BIN)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(dirname $BREW_BIN)/share/powerlevel10k/powerlevel10k.zsh-theme
 
-export PROJECT_PATHS="/home/alanbuscaglia/work"
+export PROJECT_PATHS="/home/josep/work"
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_DEFAULT_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exlude .git"
 
-WM_VAR="/$TMUX"
+WM_VAR="/$ZELLIJ"
 # change with ZELLIJ
-WM_CMD="tmux"
+WM_CMD="zellij"
 # change with zellij
 
 function start_if_needed() {

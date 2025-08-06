@@ -24,23 +24,6 @@ local mode = {
   end,
 }
 
-local function codecompanion_adapter_name()
-  local chat = require("codecompanion").buf_get_chat(vim.api.nvim_get_current_buf())
-  if not chat then
-    return nil
-  end
-
-  return " " .. chat.adapter.formatted_name
-end
-
-local function codecompanion_current_model_name()
-  local chat = require("codecompanion").buf_get_chat(vim.api.nvim_get_current_buf())
-  if not chat then
-    return nil
-  end
-
-  return chat.settings.model
-end
 -- This file contains the configuration for various UI-related plugins in Neovim.
 return {
   -- Plugin: folke/todo-comments.nvim
@@ -117,39 +100,6 @@ return {
             },
           },
         },
-        {
-          filetypes = { "codecompanion" },
-          sections = {
-            lualine_a = {
-              mode,
-            },
-            lualine_b = {
-              codecompanion_adapter_name,
-            },
-            lualine_c = {
-              codecompanion_current_model_name,
-            },
-            lualine_x = {},
-            lualine_y = {
-              "progress",
-            },
-            lualine_z = {
-              "location",
-            },
-          },
-          inactive_sections = {
-            lualine_a = {},
-            lualine_b = {
-              codecompanion_adapter_name,
-            },
-            lualine_c = {},
-            lualine_x = {},
-            lualine_y = {
-              "progress",
-            },
-            lualine_z = {},
-          },
-        },
       },
     },
   },
@@ -178,23 +128,6 @@ return {
         end,
       })
     end,
-  },
-
-  -- Plugin: zen-mode.nvim
-  -- URL: https://github.com/folke/zen-mode.nvim
-  -- Description: A Neovim plugin for distraction-free coding.
-  {
-    "folke/zen-mode.nvim",
-    cmd = "ZenMode", -- Command to toggle Zen Mode
-    opts = {
-      plugins = {
-        gitsigns = true, -- Enable gitsigns integration
-        tmux = true, -- Enable tmux integration
-        kitty = { enabled = false, font = "+2" }, -- Disable kitty integration and set font size
-        twilight = { enabled = true }, -- Enable twilight integration
-      },
-    },
-    keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } }, -- Keybinding to toggle Zen Mode
   },
 
   -- Plugin: snacks.nvim

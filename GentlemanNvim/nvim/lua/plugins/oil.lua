@@ -44,16 +44,16 @@ return {
       ["g."] = "actions.toggle_hidden",
       ["g\\"] = "actions.toggle_trash",
       -- Window navigation without conflicts
-      ["<C-h>"] = function()
+      ["<C-j>"] = function()
         vim.cmd("wincmd h")
       end,
-      ["<C-j>"] = function()
+      ["<C-k>"] = function()
         vim.cmd("wincmd j")
       end,
-      ["<C-k>"] = function()
+      ["<C-l>"] = function()
         vim.cmd("wincmd k")
       end,
-      ["<C-l>"] = function()
+      ["<C-;>"] = function()
         vim.cmd("wincmd l")
       end,
       -- Quick quit
