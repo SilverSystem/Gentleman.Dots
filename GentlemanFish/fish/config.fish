@@ -20,13 +20,13 @@ set -x PATH $HOME/.volta/bin $HOME/.bun/bin $HOME/.nix-profile/bin /nix/var/nix/
 
 eval ($BREW_BIN shellenv)
 
-if not set -q TMUX
-    tmux
-end
+# if not set -q TMUX
+#     tmux
+# end
 
-#if not set -q ZELLIJ 
-#  zellij
-#end
+if not set -q ZELLIJ 
+ zellij
+end
 
 starship init fish | source
 zoxide init fish | source
