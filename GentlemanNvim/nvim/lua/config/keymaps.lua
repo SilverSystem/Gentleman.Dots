@@ -13,15 +13,40 @@ vim.keymap.set({ "i", "n", "v" }, "<C-c>", [[<C-\><C-n>]])
 -- Screen Keys
 vim.keymap.set({ "n" }, "<leader>uk", "<cmd>Screenkey<CR>")
 
------ Tmux Navigation ------
-local nvim_tmux_nav = require("nvim-tmux-navigation")
+-- Normal, Visual, Select modes
+local modes_nv = { "n", "v", "x" }
+vim.keymap.set(modes_nv, "j", "h", { noremap = true, silent = true })
+vim.keymap.set(modes_nv, "k", "k", { noremap = true, silent = true })
+vim.keymap.set(modes_nv, "l", "j", { noremap = true, silent = true })
+vim.keymap.set(modes_nv, ";", "l", { noremap = true, silent = true })
 
-vim.keymap.set("n", "<C-h>", nvim_tmux_nav.NvimTmuxNavigateLeft) -- Navigate to the left pane
-vim.keymap.set("n", "<C-j>", nvim_tmux_nav.NvimTmuxNavigateDown) -- Navigate to the bottom pane
-vim.keymap.set("n", "<C-k>", nvim_tmux_nav.NvimTmuxNavigateUp) -- Navigate to the top pane
-vim.keymap.set("n", "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight) -- Navigate to the right pane
-vim.keymap.set("n", "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive) -- Navigate to the last active pane
-vim.keymap.set("n", "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext) -- Navigate to the next pane
+-- Insert mode (movement with <C-o> to switch briefly to normal mode)
+vim.keymap.set("i", "<C-j>", "<Left>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-k>", "<Up>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-l>", "<Down>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-;>", "<Right>", { noremap = true, silent = true })
+
+-- Command-line mode
+vim.keymap.set("c", "<C-j>", "<Left>", { noremap = true, silent = true })
+vim.keymap.set("c", "<C-k>", "<Up>", { noremap = true, silent = true })
+vim.keymap.set("c", "<C-l>", "<Down>", { noremap = true, silent = true })
+vim.keymap.set("c", "<C-;>", "<Right>", { noremap = true, silent = true })
+
+-- Terminal mode (requires <C-\\><C-n> to switch to normal mode first)
+vim.keymap.set("t", "<C-j>", "<C-\\><C-n><Left>", { noremap = true, silent = true })
+vim.keymap.set("t", "<C-k>", "<C-\\><C-n><Up>", { noremap = true, silent = true })
+vim.keymap.set("t", "<C-l>", "<C-\\><C-n><Down>", { noremap = true, silent = true })
+vim.keymap.set("t", "<C-;>", "<C-\\><C-n><Right>", { noremap = true, silent = true })
+
+----- Tmux Navigation ------
+--local nvim_tmux_nav = require("nvim-tmux-navigation")
+
+--vim.keymap.set("n", "<C-h>", nvim_tmux_nav.NvimTmuxNavigateLeft) -- Navigate to the left pane
+--vim.keymap.set("n", "<C-j>", nvim_tmux_nav.NvimTmuxNavigateDown) -- Navigate to the bottom pane
+--vim.keymap.set("n", "<C-k>", nvim_tmux_nav.NvimTmuxNavigateUp) -- Navigate to the top pane
+--vim.keymap.set("n", "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight) -- Navigate to the right pane
+--vim.keymap.set("n", "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive) -- Navigate to the last active pane
+--vim.keymap.set("n", "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext) -- Navigate to the next pane
 
 ----- OBSIDIAN -----
 vim.keymap.set("n", "<leader>oc", "<cmd>ObsidianCheck<CR>", { desc = "Obsidian Check Checkbox" })
